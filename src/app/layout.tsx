@@ -22,22 +22,32 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+const pageTitle = `${site.name} / Full-Stack Developer`;
+
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} · ${site.role}`,
+    default: pageTitle,
     template: `%s · ${site.name}`,
   },
   description: site.pitch,
+  applicationName: site.name,
+  authors: [{ name: site.name }],
+  creator: site.name,
   metadataBase: new URL("https://cyril-izuchukwu-portfolio.vercel.app"),
+  icons: {
+    icon: [{ url: "/icon", type: "image/png" }],
+    apple: [{ url: "/apple-icon", type: "image/png" }],
+  },
   openGraph: {
-    title: `${site.name} · ${site.role}`,
+    title: pageTitle,
     description: site.pitch,
     type: "website",
     locale: "en_US",
+    siteName: site.name,
   },
   twitter: {
-    card: "summary_large_image",
-    title: `${site.name} · ${site.role}`,
+    card: "summary",
+    title: pageTitle,
     description: site.pitch,
   },
 };
