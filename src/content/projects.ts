@@ -18,7 +18,7 @@ export const projects = {
       role: "Backend",
       blurb:
         "Backend for Getyovo, a local commerce platform that lets people order pharmacy, grocery, and restaurant items from nearby vendors for doorstep delivery.",
-      stack: ["Laravel", "PHP", "APIs", "MySQL"],
+      stack: ["Node.js", "Express", "APIs", "PostgreSQL"],
       liveUrl: "https://www.getyovo.app/",
     },
     {
