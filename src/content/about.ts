@@ -25,6 +25,7 @@ export const about = {
         "JavaScript",
         "TypeScript",
         "Vue",
+        "React",
         "Inertia.js",
       ],
     },
