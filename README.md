@@ -22,14 +22,17 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Project name target: `cyril-izuchukwu-portfolio`
 
+1. Push this repo to GitHub (no remote is configured in the greenfield VM yet).
+2. Import the repo in the [Vercel dashboard](https://vercel.com/new), set project name to `cyril-izuchukwu-portfolio`, Framework Preset **Next.js**, then Deploy.
+
+Or after `vercel login`:
+
 ```bash
-# From this directory
-npx vercel --name cyril-izuchukwu-portfolio
-# Production
-npx vercel --prod --name cyril-izuchukwu-portfolio
+npx vercel        # preview
+npx vercel --prod # production
 ```
 
-Or connect the GitHub repo in the Vercel dashboard and set the project name to `cyril-izuchukwu-portfolio`.
+Anonymous/temporary deploys (no login): `npx vercel deploy --temporary --yes` — claim the URL in the Vercel UI before it expires.
 
 ## Content
 
