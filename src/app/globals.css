@@ -1,0 +1,55 @@
+@import "../styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-navy font-sans text-slate antialiased;
+    background-image:
+      radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        rgba(100, 255, 218, 0.05),
+        transparent
+      ),
+      linear-gradient(180deg, #0a192f 0%, #020c1b 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: var(--green-tint);
+    color: var(--green);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .skip-link {
+    @apply absolute left-4 top-0 z-[100] -translate-y-full rounded-sm bg-green px-4 py-2 font-mono text-sm text-navy transition focus:translate-y-4;
+  }
+}
