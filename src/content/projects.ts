@@ -35,7 +35,7 @@ export const projects = {
       title: "Business Desk",
       role: "Frontend",
       blurb:
-        "Frontend for businessdesk.ng — responsive interfaces for a Nigerian business platform.",
+        "Frontend for BusinessDesk, a Nigerian platform for online CAC registration and other government filings (business names, companies, NGOs, TIN) without office visits.",
       stack: ["JavaScript", "Tailwind", "HTML/CSS", "Vue"],
       liveUrl: "https://businessdesk.ng/",
     },
