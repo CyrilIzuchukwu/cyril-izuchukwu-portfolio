@@ -44,7 +44,7 @@ export const projects = {
       title: "AGO Cares Foundation",
       role: "Fullstack",
       blurb:
-        "Fullstack site for AGO Cares Foundation — public presence and supporting web flows for the nonprofit.",
+        "Fullstack for AGO Cares Foundation, an NGO site supporting people with disabilities, persons with albinism, and vulnerable children through healthcare, education, and advocacy.",
       stack: ["Laravel", "JavaScript", "MySQL", "HTML/CSS"],
       liveUrl: "https://agocaresfoundation.org/",
     },
