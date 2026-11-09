@@ -13,11 +13,11 @@ export const projects = {
     "A selection of products I’ve shipped — backend-heavy systems, team-led platforms, and polished frontends.",
   items: [
     {
-      id: "yovo",
-      title: "Yovo",
+      id: "getyovo",
+      title: "Getyovo",
       role: "Backend",
       blurb:
-        "Backend for getyovo.app — APIs and server-side logic powering the live product experience.",
+        "Backend for Getyovo, a local commerce platform that lets people order pharmacy, grocery, and restaurant items from nearby vendors for doorstep delivery.",
       stack: ["Laravel", "PHP", "APIs", "MySQL"],
       liveUrl: "https://www.getyovo.app/",
     },
