@@ -1,34 +1,25 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/cn";
-import { Container } from "./Container";
 
 type SectionProps = {
   id: string;
   children: React.ReactNode;
   className?: string;
-  containerClassName?: string;
+  "aria-label"?: string;
 };
 
 export function Section({
   id,
   children,
   className,
-  containerClassName,
+  "aria-label": ariaLabel,
 }: SectionProps) {
-  const reduceMotion = useReducedMotion();
-
   return (
-    <motion.section
+    <section
       id={id}
-      className={cn("scroll-mt-24 py-[var(--section-pad)]", className)}
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      aria-label={ariaLabel}
+      className={cn("scroll-mt-24 mb-16 last:mb-0 md:mb-24", className)}
     >
-      <Container className={containerClassName}>{children}</Container>
-    </motion.section>
+      {children}
+    </section>
   );
 }

@@ -10,6 +10,7 @@ export default {
     extend: {
       colors: {
         navy: "var(--navy)",
+        "dark-navy": "var(--dark-navy)",
         "light-navy": "var(--light-navy)",
         "lightest-navy": "var(--lightest-navy)",
         slate: "var(--slate)",

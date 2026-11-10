@@ -1,6 +1,6 @@
-export type SkillGroup = {
+export type AboutLink = {
   label: string;
-  items: string[];
+  href: string;
 };
 
 export type EducationItem = {
@@ -12,45 +12,69 @@ export type EducationItem = {
 
 export const about = {
   headline: "About",
-  summary:
-    "Passionate, detail-oriented developer with 3+ years building web products. Strong on data structures, responsive apps, and clean code. Comfortable remote or in teams, with continuous learning as a habit. Full-stack capable — backend is the primary focus.",
-  skills: [
+  image: {
+    src: "/images/about.jpg",
+    alt: "Portrait of Cyril Izuchukwu",
+  },
+  paragraphs: [
     {
-      label: "Frontend",
-      items: [
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "Tailwind",
-        "JavaScript",
-        "TypeScript",
-        "Vue",
-        "React",
-        "Inertia.js",
+      type: "text" as const,
+      parts: [
+        {
+          kind: "text" as const,
+          value:
+            "I’m a passionate, detail-oriented developer with 3+ years building web products. I care about data structures, responsive interfaces, and clean code — and I’m just as comfortable shipping solo as collaborating with a team. Continuous learning is a habit; full-stack capable, with backend as the primary focus.",
+        },
       ],
     },
     {
-      label: "Backend",
-      items: ["PHP", "Laravel", "Node.js", "Express.js", "Nest.js"],
-    },
-    {
-      label: "Data",
-      items: ["SQL", "MySQL", "MongoDB"],
-    },
-    {
-      label: "Ops",
-      items: ["Git/GitHub", "AWS", "CI/CD"],
-    },
-    {
-      label: "Practices",
-      items: [
-        "Agile",
-        "Microservices",
-        "Technical documentation",
-        "Design thinking",
+      type: "text" as const,
+      parts: [
+        {
+          kind: "text" as const,
+          value: "These days I teach and build backend systems at ",
+        },
+        {
+          kind: "link" as const,
+          label: "Kodex Africa",
+          href: "https://kodexafrica.com/",
+        },
+        {
+          kind: "text" as const,
+          value:
+            ", where I design curricula, mentor engineers, and ship Laravel and Node services. I’ve also built product frontends and platforms for commerce, learning, filings, and nonprofit work across Nigeria.",
+        },
       ],
     },
-  ] satisfies SkillGroup[],
+    {
+      type: "text" as const,
+      parts: [
+        {
+          kind: "text" as const,
+          value:
+            "When I’m not in the terminal, I’m usually refining how teams write clearer APIs, stronger docs, and shippable increments. Based in ",
+        },
+        {
+          kind: "text" as const,
+          value: "Abuja, Nigeria",
+        },
+        {
+          kind: "text" as const,
+          value: ".",
+        },
+      ],
+    },
+  ],
+  recentTech: [
+    "Laravel",
+    "PHP",
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "React",
+    "Vue",
+    "TypeScript",
+  ],
   education: [
     {
       title: "Full-Stack Web Development",
@@ -63,12 +87,6 @@ export const about = {
       school: "Joseph Sarwuan Tarka University, Makurdi",
       year: "2021",
       location: "Benue, Nigeria",
-    },
-    {
-      title: "WASSCE",
-      school: "Federal Government College, Ugwolawo",
-      year: "2016",
-      location: "Kogi, Nigeria",
     },
   ] satisfies EducationItem[],
 } as const;

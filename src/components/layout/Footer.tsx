@@ -1,28 +1,18 @@
 import { site } from "@/content/site";
-import { Container } from "./Container";
-import { TextLink } from "@/components/ui/TextLink";
 
 export function Footer() {
   return (
-    <footer className="pb-10 pt-4">
-      <Container className="flex flex-col items-center gap-6">
-        <ul className="flex items-center gap-6 md:hidden">
-          {site.socials.map((social) => (
-            <li key={social.label}>
-              <TextLink
-                href={social.href}
-                external={social.external}
-                className="font-mono text-xs text-slate hover:text-green"
-              >
-                {social.label}
-              </TextLink>
-            </li>
-          ))}
-        </ul>
-        <p className="font-mono text-xs text-slate">
-          Designed & built by {site.name}
-        </p>
-      </Container>
+    <footer className="mt-16 pb-4 pt-8 text-sm text-slate lg:mt-24">
+      <p>
+        Designed & built by{" "}
+        <a
+          href={`mailto:${site.email}`}
+          className="text-light-slate transition hover:text-green"
+        >
+          {site.name}
+        </a>
+        , inspired by Brittany Chiang.
+      </p>
     </footer>
   );
 }

@@ -26,13 +26,12 @@
 
   body {
     @apply bg-navy font-sans text-slate antialiased;
-    background-image:
-      radial-gradient(
-        ellipse 80% 50% at 50% -20%,
-        rgba(100, 255, 218, 0.05),
-        transparent
-      ),
-      linear-gradient(180deg, #0a192f 0%, #020c1b 100%);
+    background-color: var(--navy);
+    background-image: radial-gradient(
+      ellipse 80% 50% at 50% -20%,
+      rgba(100, 255, 218, 0.04),
+      transparent
+    );
     background-attachment: fixed;
     min-height: 100vh;
   }
