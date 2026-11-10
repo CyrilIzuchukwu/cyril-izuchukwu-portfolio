@@ -21,8 +21,9 @@ export const about = {
     "TypeScript",
     "React",
     "Vue",
-    "Node.js",
-    "Laravel",
+    "Node.js(Express/Nest)",
+    "PHP(Laravel)",
+    "Inertiajs",
   ],
   education: [
     {
