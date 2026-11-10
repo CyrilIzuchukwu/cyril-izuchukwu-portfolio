@@ -14,17 +14,18 @@ export type NavItem = {
 export const site = {
   name: "Cyril Izuchukwu",
   legalName: "Ugwuodo Cyril",
-  role: "Full-Stack Developer",
+  role: "I build reliable products for the web.",
   location: "Abuja, Nigeria",
   email: "alexcyril34@gmail.com",
   phone: "08083976834",
   resumePath: "/resume.pdf",
   pitch:
-    "I build reliable web products end-to-end, with deepest strength in backend systems, APIs, and shipping with teams.",
+    "I’m a full-stack developer specializing in backend systems, APIs, and shipping with teams. Currently focused on building reliable web products and teaching engineers in Nigeria.",
   nav: [
     { label: "About", href: `#${SECTION_IDS.about}` },
     { label: "Experience", href: `#${SECTION_IDS.experience}` },
-    { label: "Projects", href: `#${SECTION_IDS.projects}` },
+    { label: "Work", href: `#${SECTION_IDS.projects}` },
+    { label: "Contact", href: `#${SECTION_IDS.contact}` },
   ] satisfies NavItem[],
   socials: [
     {

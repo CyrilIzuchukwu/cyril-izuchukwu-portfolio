@@ -27,12 +27,7 @@
   body {
     @apply bg-navy font-sans text-slate antialiased;
     background-color: var(--navy);
-    background-image: radial-gradient(
-      ellipse 80% 50% at 50% -20%,
-      rgba(100, 255, 218, 0.04),
-      transparent
-    );
-    background-attachment: fixed;
+    counter-reset: section;
     min-height: 100vh;
   }
 

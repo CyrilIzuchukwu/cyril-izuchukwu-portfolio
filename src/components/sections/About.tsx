@@ -7,53 +7,51 @@ import { TextLink } from "@/components/ui/TextLink";
 
 export function About() {
   return (
-    <Section id={SECTION_IDS.about} aria-label="About me">
-      <Heading>{about.headline}</Heading>
+    <Section id={SECTION_IDS.about} containerClassName="max-w-[900px]">
+      <Heading index="01.">{about.headline}</Heading>
 
-      <div className="grid items-start gap-10 md:grid-cols-[minmax(0,1fr)_minmax(10rem,13rem)] md:gap-12">
-        <div className="space-y-4 text-base leading-relaxed text-slate">
-          {about.paragraphs.map((paragraph, index) => (
-            <p key={index}>
-              {paragraph.parts.map((part, partIndex) =>
-                part.kind === "link" ? (
-                  <TextLink
-                    key={`${index}-${partIndex}`}
-                    href={part.href}
-                    external
-                    className="font-medium text-lightest-slate hover:text-green"
-                  >
-                    {part.label}
-                  </TextLink>
-                ) : (
-                  <span key={`${index}-${partIndex}`}>{part.value}</span>
-                ),
-              )}
-            </p>
-          ))}
-
-          <p className="pt-2 text-sm text-slate">
-            A few technologies I’ve been working with recently:
+      <div className="mt-10 grid items-start gap-12 md:grid-cols-[3fr_2fr]">
+        <div className="space-y-4 text-[17px] leading-[1.6] text-slate md:text-lg">
+          <p>{about.paragraphs[0]}</p>
+          <p>
+            Fast-forward to today, and I’ve had the privilege of teaching and
+            building backend systems at{" "}
+            <TextLink
+              href="https://kodexafrica.com/"
+              external
+              className="inline font-normal text-green hover:underline"
+            >
+              Kodex Africa
+            </TextLink>
+            , shipping product frontends, and delivering platforms for commerce,
+            learning, filings, and nonprofit work across Nigeria. Full-stack
+            capable — backend is the primary focus.
           </p>
-          <ul className="grid max-w-md grid-cols-2 gap-x-4 gap-y-2 font-mono text-xs text-slate">
+          <p>{about.paragraphs[2]}</p>
+
+          <ul className="mt-5 grid max-w-md grid-cols-2 gap-x-2 gap-y-2 font-mono text-sm text-slate">
             {about.recentTech.map((tech) => (
-              <li key={tech} className="relative pl-4 before:absolute before:left-0 before:text-green before:content-['▹']">
+              <li
+                key={tech}
+                className="relative pl-5 before:absolute before:left-0 before:text-green before:content-['▹']"
+              >
                 {tech}
               </li>
             ))}
           </ul>
 
-          <div className="pt-4">
-            <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.18em] text-green">
+          <div className="pt-6">
+            <p className="mb-3 font-mono text-xs uppercase tracking-widest text-green">
               Education
             </p>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-sm md:text-base">
               {about.education.map((item) => (
                 <li key={`${item.school}-${item.year}`}>
                   <p className="font-medium text-lightest-slate">
                     {item.title}
                     <span className="text-slate"> · {item.school}</span>
                   </p>
-                  <p className="font-mono text-[11px] text-slate">
+                  <p className="font-mono text-xs text-slate">
                     {item.year} · {item.location}
                   </p>
                 </li>
@@ -62,19 +60,22 @@ export function About() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[14rem] md:mx-0 md:max-w-none">
+        <div className="relative mx-auto w-[70%] max-w-[300px] md:mx-0 md:w-full md:max-w-none">
           <div className="group relative">
-            <div className="absolute inset-0 translate-x-3 translate-y-3 rounded border border-green transition group-hover:translate-x-4 group-hover:translate-y-4" />
-            <div className="relative overflow-hidden rounded bg-green">
+            <div
+              aria-hidden
+              className="absolute inset-0 translate-x-[14px] translate-y-[14px] rounded border-2 border-green transition duration-300 group-hover:translate-x-[18px] group-hover:translate-y-[18px]"
+            />
+            <div className="relative overflow-hidden rounded bg-green shadow-[0_10px_30px_-15px_var(--navy-shadow)]">
               <Image
                 src={about.image.src}
                 alt={about.image.alt}
-                width={480}
-                height={640}
-                className="aspect-[3/4] w-full object-cover mix-blend-multiply grayscale contrast-110 transition duration-300 group-hover:mix-blend-normal group-hover:grayscale-0"
+                width={500}
+                height={500}
                 priority
+                className="relative z-[1] aspect-square w-full object-cover mix-blend-multiply grayscale contrast-110 transition duration-300 group-hover:mix-blend-normal group-hover:grayscale-0"
               />
-              <div className="pointer-events-none absolute inset-0 bg-navy/25 mix-blend-screen transition group-hover:bg-transparent" />
+              <div className="pointer-events-none absolute inset-0 z-[2] bg-navy/30 mix-blend-screen transition group-hover:bg-transparent" />
             </div>
           </div>
         </div>

@@ -1,8 +1,3 @@
-export type AboutLink = {
-  label: string;
-  href: string;
-};
-
 export type EducationItem = {
   title: string;
   school: string;
@@ -11,69 +6,23 @@ export type EducationItem = {
 };
 
 export const about = {
-  headline: "About",
+  headline: "About Me",
   image: {
     src: "/images/about.jpg",
     alt: "Portrait of Cyril Izuchukwu",
   },
   paragraphs: [
-    {
-      type: "text" as const,
-      parts: [
-        {
-          kind: "text" as const,
-          value:
-            "I’m a passionate, detail-oriented developer with 3+ years building web products. I care about data structures, responsive interfaces, and clean code — and I’m just as comfortable shipping solo as collaborating with a team. Continuous learning is a habit; full-stack capable, with backend as the primary focus.",
-        },
-      ],
-    },
-    {
-      type: "text" as const,
-      parts: [
-        {
-          kind: "text" as const,
-          value: "These days I teach and build backend systems at ",
-        },
-        {
-          kind: "link" as const,
-          label: "Kodex Africa",
-          href: "https://kodexafrica.com/",
-        },
-        {
-          kind: "text" as const,
-          value:
-            ", where I design curricula, mentor engineers, and ship Laravel and Node services. I’ve also built product frontends and platforms for commerce, learning, filings, and nonprofit work across Nigeria.",
-        },
-      ],
-    },
-    {
-      type: "text" as const,
-      parts: [
-        {
-          kind: "text" as const,
-          value:
-            "When I’m not in the terminal, I’m usually refining how teams write clearer APIs, stronger docs, and shippable increments. Based in ",
-        },
-        {
-          kind: "text" as const,
-          value: "Abuja, Nigeria",
-        },
-        {
-          kind: "text" as const,
-          value: ".",
-        },
-      ],
-    },
+    "I’m a passionate, detail-oriented developer with 3+ years building web products. I care about data structures, responsive interfaces, and clean code — and I’m just as comfortable shipping solo as collaborating with a team.",
+    "Fast-forward to today, and I’ve had the privilege of teaching and building backend systems at Kodex Africa, shipping product frontends, and delivering platforms for commerce, learning, filings, and nonprofit work across Nigeria. Full-stack capable — backend is the primary focus.",
+    "Here are a few technologies I’ve been working with recently:",
   ],
   recentTech: [
-    "Laravel",
-    "PHP",
-    "Node.js",
-    "Express",
-    "PostgreSQL",
+    "JavaScript (ES6+)",
+    "TypeScript",
     "React",
     "Vue",
-    "TypeScript",
+    "Node.js",
+    "Laravel",
   ],
   education: [
     {

@@ -12,9 +12,8 @@ export type Project = {
 };
 
 export const projects = {
-  headline: "Projects",
-  intro:
-    "A selection of products I’ve shipped — backend-heavy systems, team-led platforms, and polished frontends.",
+  headline: "Some Things I’ve Built",
+  intro: "",
   items: [
     {
       id: "getyovo",

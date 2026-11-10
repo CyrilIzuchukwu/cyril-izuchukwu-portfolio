@@ -1,18 +1,28 @@
 import { site } from "@/content/site";
+import { Container } from "./Container";
 
 export function Footer() {
   return (
-    <footer className="mt-16 pb-4 pt-8 text-sm text-slate lg:mt-24">
-      <p>
-        Designed & built by{" "}
-        <a
-          href={`mailto:${site.email}`}
-          className="text-light-slate transition hover:text-green"
-        >
-          {site.name}
-        </a>
-        , inspired by Brittany Chiang.
-      </p>
+    <footer className="pb-10 pt-4">
+      <Container className="flex flex-col items-center gap-6">
+        <ul className="flex items-center gap-6 lg:hidden">
+          {site.socials.map((social) => (
+            <li key={social.label}>
+              <a
+                href={social.href}
+                target={social.external ? "_blank" : undefined}
+                rel={social.external ? "noopener noreferrer" : undefined}
+                className="font-mono text-xs text-slate transition hover:text-green"
+              >
+                {social.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p className="font-mono text-xs text-slate">
+          Designed & Built by {site.name}
+        </p>
+      </Container>
     </footer>
   );
 }

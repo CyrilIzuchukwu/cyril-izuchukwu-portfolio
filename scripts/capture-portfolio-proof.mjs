@@ -13,11 +13,11 @@ async function main() {
   const browser = await chromium.launch({ headless: true });
 
   const desktop = await browser.newPage({
-    viewport: { width: 1440, height: 980 },
+    viewport: { width: 1440, height: 900 },
     deviceScaleFactor: 1,
   });
   await desktop.goto(baseUrl, { waitUntil: "networkidle", timeout: 60000 });
-  await desktop.waitForTimeout(1200);
+  await desktop.waitForTimeout(1000);
   await desktop.screenshot({
     path: path.join(mediaDir, "brittany-match-desktop.png"),
     fullPage: false,
@@ -30,7 +30,7 @@ async function main() {
     hasTouch: true,
   });
   await mobile.goto(baseUrl, { waitUntil: "networkidle", timeout: 60000 });
-  await mobile.waitForTimeout(1200);
+  await mobile.waitForTimeout(1000);
   await mobile.screenshot({
     path: path.join(mediaDir, "brittany-match-mobile.png"),
     fullPage: false,

@@ -1,5 +1,5 @@
 :root {
-  /* Brittany Chiang–inspired palette */
+  /* Brittany Chiang v4 palette */
   --dark-navy: #020c1b;
   --navy: #0a192f;
   --light-navy: #112240;
@@ -24,7 +24,7 @@
   --font-mono: var(--font-ibm-plex-mono), "SF Mono", "Fira Code", ui-monospace,
     monospace;
 
-  --section-pad: clamp(4rem, 10vh, 6rem);
-  --content-max: 1120px;
-  --nav-height: 4.5rem;
+  --section-pad: clamp(60px, 10vh, 100px);
+  --content-max: 1600px;
+  --nav-height: 100px;
 }
